@@ -1,0 +1,10 @@
+M = int(input())
+Mset = set(map(int, input().split()))
+N = int(input())
+Nset = set(map(int, input().split()))
+lis = set()
+lis.update(Mset.difference(Nset))
+lis.update(Nset.difference(Mset))
+newlis = sorted(list(map(int, lis)))
+for i in range(len(newlis)):
+    print(newlis[i])
